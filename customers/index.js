@@ -6,4 +6,8 @@ const app = express();
 app.use(cors())
 app.use(express.json())
 
+app.get('/', (req, res) => {
+    res.send('Customers service is responding')
+})
+
 app.listen(5001, () => console.log("Customer service is running on port 5001"))
