@@ -1,0 +1,20 @@
+version: '3.4'
+services:
+  api-gateway:
+    build: ./api-gateway
+    ports:
+      - '5000:5000'
+    expose:
+      - '5000'
+  customers:
+    build: ./customers
+    ports:
+      - '5001:5001'
+    expose:
+      - '5001'
+  products:
+    build: ./products
+    ports:
+      - '5002:5002'
+    expose:
+      - '5002'
