@@ -8,12 +8,14 @@ services:
       - '5000'
   customers:
     build: ./customers
+    container_name: customers-container
     ports:
       - '5001:5001'
     expose:
       - '5001'
   products:
     build: ./products
+    container_name: products-container
     ports:
       - '5002:5002'
     expose:
